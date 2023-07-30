@@ -5,22 +5,26 @@
   "author": "windlil",
   "license": "ISC",
   "keywords": [
-    "UI", "vue", "vue-components"
+    "UI",
+    "vue",
+    "vue-components"
   ],
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "test": "vitest",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.39.8",
+    "@commitlint/cli": "^17.6.7",
+    "@commitlint/config-conventional": "^17.6.7",
+    "@types/node": "^20.4.5",
     "eslint": "^8.46.0",
-    "typescript": "^5.1.6"
-  },
-  "simple-git-hooks": {
-    "pre-commit": "pnpm lint-staged"
-  },
-  "lint-staged": {
-    "*": "eslint --fix"
+    "husky": "^8.0.3",
+    "typescript": "^5.1.6",
+    "vite": "^4.4.7",
+    "vitest": "^0.33.0"
   }
 }
