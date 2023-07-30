@@ -23,8 +23,12 @@
     "@types/node": "^20.4.5",
     "eslint": "^8.46.0",
     "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
     "typescript": "^5.1.6",
     "vite": "^4.4.7",
     "vitest": "^0.33.0"
+  },
+  "lint-staged": {
+    "*.{js, ts, vue, tsx, jsx}": "eslint --fix"
   }
 }
