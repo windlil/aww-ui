@@ -11,21 +11,28 @@
   ],
   "main": "index.js",
   "scripts": {
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
+    "dev:docs": "vitepress dev docs",
+    "build:docs": "vitepress build docs",
+    "preview": "vitepress preview docs",
     "test": "vitest",
     "prepare": "husky install"
+  },
+  "dependencies": {
+    "vue": "^3.1.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.39.8",
     "@commitlint/cli": "^17.6.7",
     "@commitlint/config-conventional": "^17.6.7",
     "@types/node": "^20.4.5",
+    "@vitejs/plugin-vue": "^4.2.3",
     "eslint": "^8.46.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.3",
     "typescript": "^5.1.6",
     "vite": "^4.4.7",
+    "vitepress": "1.0.0-beta.7",
+    "vitepress-theme-demoblock": "^3.0.3",
     "vitest": "^0.33.0"
   },
   "lint-staged": {
