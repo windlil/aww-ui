@@ -1,12 +1,13 @@
 ---
 layout: home
-
 title: AwwUI
-titleTemplate: Amazing UI Components Library
+titleTemplate: Vue3 components library
 
 hero:
   name: AwwUI
   text: AwwUI 组件库
+  image:
+    src: /logo.svg
   tagline: 基于 Vue3 + TS + Vite + Less 开发
   actions:
     - theme: brand

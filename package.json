@@ -1,5 +1,6 @@
 {
   "name": "aww-ui",
+  "type": "module",
   "version": "1.0.0",
   "description": "",
   "author": "windlil",
@@ -15,9 +16,14 @@
     "build:docs": "vitepress build docs",
     "preview": "vitepress preview docs",
     "test": "vitest",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "docs:dev": "pnpm run register:components && vitepress dev docs",
+    "docs:build": "pnpm run register:components && vitepress build docs",
+    "docs:serve": "vitepress serve docs",
+    "register:components": "vitepress-rc"
   },
   "dependencies": {
+    "element-plus": "^2.3.8",
     "vue": "^3.1.0"
   },
   "devDependencies": {
