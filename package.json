@@ -12,9 +12,6 @@
   ],
   "main": "index.js",
   "scripts": {
-    "dev:docs": "vitepress dev docs",
-    "build:docs": "vitepress build docs",
-    "preview": "vitepress preview docs",
     "test": "vitest",
     "prepare": "husky install",
     "docs:dev": "pnpm run register:components && vitepress dev docs",
@@ -35,6 +32,7 @@
     "eslint": "^8.46.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.3",
+    "scss": "^0.2.4",
     "typescript": "^5.1.6",
     "vite": "^4.4.7",
     "vitepress": "1.0.0-beta.7",

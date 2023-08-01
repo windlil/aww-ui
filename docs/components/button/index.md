@@ -1,14 +1,10 @@
 :::demo
 ```vue
 <template>
-  <el-row class="mb-4">
-    <el-button>Default</el-button>
-    <el-button type="primary">Primary</el-button>
-    <el-button type="success">Success</el-button>
-    <el-button type="info">Info</el-button>
-    <el-button type="warning">Warning</el-button>
-    <el-button type="danger">Danger</el-button>
-  </el-row>
+  <a-button-group>
+    <a-button type="primary"></a-button>
+    <a-button type="danger"></a-button>
+  </a-button-group>
 </template>
 ```
 :::

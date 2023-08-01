@@ -2,6 +2,8 @@
   "extends": "@antfu",
   "rules": {
     "comma-dangle": "off",
-    "@typescript-eslint/comma-dangle": "off"
+    "@typescript-eslint/comma-dangle": "off",
+    "vue/html-self-closing": "off",
+    "sort-imports": "off"
   }
 }
