@@ -34,7 +34,12 @@
     background-color: mix($color-white, $button-default-backgroundColor, $button-hover-percent); 
   }
 
-
+  &.a-button--simple {
+    color: $border-color-base;
+    &:hover, &:active, &:focus {
+      background-color: mix(#3a3a3a, $button-default-backgroundColor, 90%); 
+    }
+  }
 
   @include when(disabled) {
     &, &:hover, &:focus {
@@ -49,23 +54,23 @@
 
 
   @include m(primary) {
-    @include button-main($button-primary-backgroundColor, $color-primary, #fff, primary);
-    @include simple($button-simple-primary-backgroundColor);
+    @include simple($button-simple-primary-backgroundColor, $color-primary-opacity-hover, $button-primary-backgroundColor);
+    @include button-main($button-primary-backgroundColor, $color-primary, $color-white, primary);
   }
 
   @include m(success) {
-    @include button-main($button-success-backgroundColor, $color-success, #fff, success);
-    @include simple($button-simple-success-backgroundColor);
+    @include simple($button-simple-success-backgroundColor, $color-success-opacity-hover, $button-success-backgroundColor);
+    @include button-main($button-success-backgroundColor, $color-success, $color-white, success);
   }
 
   @include m(warning) {
-    @include button-main($button-warning-backgroundColor, $color-warning, #fff, warning);
-    @include simple($button-simple-warning-backgroundColor);
+    @include simple($button-simple-warning-backgroundColor, $color-warning-opacity-hover, $button-warning-backgroundColor);
+    @include button-main($button-warning-backgroundColor, $color-warning, $color-white, warning);
   }
 
   @include m(danger) {
-    @include button-main($button-danger-backgroundColor, $color-danger, #fff, danger);
-    @include simple($button-simple-danger-backgroundColor);
+    @include simple($button-simple-danger-backgroundColor, $color-danger-opacity-hover, $button-danger-backgroundColor);
+    @include button-main($button-danger-backgroundColor, $color-danger, $color-white, danger);
   }
 
   @include m(large) {
@@ -85,8 +90,10 @@
   }
 
   @include m(simple) {
-    background-color: $color-transparent;
+    background-color: $button-simple-default-backgroundColor;
+    color: $font-gray;
   }
+
 }
 
 .a-button--primary.a-button--ripple {
@@ -102,7 +109,7 @@
 }
 
 .a-button--danger.a-button--ripple {
-  @include ripple($button-warning-backgroundColor, danger)
+  @include ripple($button-danger-backgroundColor, danger)
 }
 
 

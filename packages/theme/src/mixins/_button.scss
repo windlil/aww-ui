@@ -13,9 +13,9 @@
   
   &.is-disabled {
     &, &:hover, &:focus, &:active {
-      color: $color-white;
-      background-color: mix($background-color, $color-gray);
-      border-color: mix($border-color, $color-gray);
+      color: $color-white !important;
+      background-color: mix($background-color, $color-gray) !important;
+      border-color: mix($border-color, $color-gray) !important;
     }
   }
 }
@@ -55,9 +55,12 @@
   }
 }
 
-@mixin simple($background-color) {
+@mixin simple($background-color, $background-color-hover, $font-color) {
   &.a-button--simple {
-    background-color: $background-color;
-    color: $font-gray;
+    background-color: $background-color !important;
+    color: $font-color !important;
+    &:hover, &:active, &:focus {
+      background-color: $background-color-hover !important;
+    }
   }
 }

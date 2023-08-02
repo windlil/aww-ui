@@ -45,7 +45,7 @@ function handleAnimationEnd() {
 </script>
 
 <template>
-  <button :class="classList" class="a-button" @click="handleClick" @animationend="handleAnimationEnd">
+  <button :disabled="props.disabled" :class="classList" class="a-button" @click="handleClick" @animationend="handleAnimationEnd">
     <span>
       <slot>button</slot>
     </span>
