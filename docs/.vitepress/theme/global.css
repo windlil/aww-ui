@@ -1,3 +1,4 @@
-.VPNavBarAppearance {
-  display: none !important;
+h2 {
+  border: 0 !important;
+  padding-top: 0;
 }
