@@ -1,6 +1,8 @@
 import DefaultTheme from 'vitepress/theme'
-import 'vitepress-theme-demoblock/dist/theme/styles/index.css'
+import '../../../packages/theme/src/index.scss'
 import AwwUI from '../../../packages/components/index'
+import 'vitepress-theme-demoblock/dist/theme/styles/index.css'
+
 import { useComponents } from './useComponents'
 
 export default {

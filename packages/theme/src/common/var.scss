@@ -1,0 +1,27 @@
+$color-primary: #339af0 !default;
+$color-default: transparent !default;
+$color-success: #10b956 !default;
+$color-warning: rgb(205, 164, 40) !default;
+$color-danger: #ce3232 !default;
+
+$color-white: #fff !default;
+
+$font-size-base: 14px !default;
+$border-color-base: #818387 !default;
+$border-radius-base: 4px !default;
+
+$button-text-color: #bfbfbf;
+$button-hover-percent: 18% !default;
+$button-active-percent: 18% !default;
+$button-default-backgroundColor: $color-default !default;
+$button-primary-backgroundColor: $color-primary !default;
+$button-sucss-backgroundColor: $color-success !default;
+$button-warning-backgroundColor: $color-warning !default;
+$button-danger-backgroundColor: $color-danger !default;
+
+$button-default-borderColor: $border-color-base !default;
+
+$button-padding-vertical: 8px !default;
+$button-padding-horizontal: 14px !default;
+$button-font-size: $font-size-base !default;
+$button-border-radius: $border-radius-base;

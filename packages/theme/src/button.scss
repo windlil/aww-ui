@@ -1,0 +1,44 @@
+@use './common/var.scss' as *;
+@use './mixins/mixin.scss' as *;
+@use './mixins/utils.scss' as *;
+@use './mixins/_button' as *;
+
+@include b(button) {
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 0;
+  outline: none;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  border: 1px solid $border-color-base;
+  background-color: $button-default-backgroundColor;
+  color: $button-text-color;
+  transition: 0.2s;
+
+  &:hover {
+    color: $color-primary;
+    border-color: $color-primary;
+  }
+
+  @include utils-user-select(none);
+
+  @include button-size($button-padding-vertical, $button-padding-horizontal, $button-font-size, $button-border-radius);
+
+  @include m(primary) {
+    @include button-main($button-primary-backgroundColor, $color-primary, #fff);
+  }
+
+  @include m(sucess) {
+    @include button-main($button-sucss-backgroundColor, $color-success, #fff);
+  }
+
+  @include m(warning) {
+    @include button-main($button-warning-backgroundColor, $color-warning, #fff);
+  }
+
+  @include m(danger) {
+    @include button-main($button-danger-backgroundColor, $color-danger, #fff);
+  }
+}

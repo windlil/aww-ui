@@ -1,0 +1,23 @@
+@use '../common/var.scss' as *;
+
+@mixin button-main($background-color, $border-color, $color) {
+  background-color: $background-color;
+  color: $color;
+  border-color: $border-color;
+
+  &:hover {
+    color: $color;
+    border-color: mix($color-white, $border-color, $button-hover-percent);
+    background-color: mix($color-white, $background-color, $button-hover-percent);
+  }
+}
+
+@mixin button-size($padding-vertical, $padding-horizontal, $font-size, $border-radius) {
+  padding: $padding-vertical $padding-horizontal;
+  font-size: $font-size;
+  border-radius: $border-radius;
+
+  &.is-round {
+    border-radius: $border-radius;
+  }
+}

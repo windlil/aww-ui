@@ -1,36 +1,47 @@
-const guide = [
-  {
-    text: '基础',
-    items: [
-      {
-        text: '特性',
-        link: '/guide/features',
-      },
-      {
-        text: '安装',
-        link: '/guide/install',
-      },
-      {
-        text: '快速开始',
-        link: '/guide/start',
-      },
-    ],
-  },
-]
+import { enComponents, zhComponents } from './components'
 
-const components = [
-  {
-    text: '基础组件',
-    items: [
-      {
-        text: 'Button 按钮',
-        link: '/components/button/',
-      },
-    ],
-  },
-]
+export const enSidebar = {
+  '/doc/en-US/guide': [
+    {
+      text: 'Basic',
+      items: [
+        {
+          text: 'Features',
+          link: '/doc/en-US/guide/features'
+        },
+        {
+          text: 'Installation',
+          link: '/doc/en-US/guide/installation'
+        },
+        {
+          text: 'Quick Start',
+          link: '/doc/en-US/guide/quickstart'
+        }
+      ]
+    }
+  ],
+  '/doc/en-US/components': enComponents
+}
 
-export const sidebars = {
-  '/guide/': guide,
-  '/components/': components,
+export const zhSidebar = {
+  '/doc/zh-CN/guide': [
+    {
+      text: '基础',
+      items: [
+        {
+          text: '特性',
+          link: '/doc/zh-CN/guide/features'
+        },
+        {
+          text: '安装',
+          link: '/doc/zh-CN/guide/installation'
+        },
+        {
+          text: '快速开始',
+          link: '/doc/zh-CN/guide/quickstart'
+        },
+      ]
+    }
+  ],
+  '/doc/zh-CN/components': zhComponents
 }

@@ -5,10 +5,10 @@ titleTemplate: Vue3 components library
 
 hero:
   name: AwwUI
-  text: componnet Library
+  text: Vue组件库
   image:
     src: /logo.svg
-  tagline: Base Vue3 + TS + Vite + Less
+  tagline: 基于 Vue3 + TS + Vite + Less 开发
   actions:
     - theme: brand
       text: Get Started

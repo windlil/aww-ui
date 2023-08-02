@@ -7,10 +7,8 @@ defineOptions({
 })
 
 const props = withDefaults(defineProps<Props>(), {
-  type: 'primary',
   round: false,
   disabled: false,
-  size: 'default'
 })
 
 const emits = defineEmits(['click'])
@@ -19,10 +17,10 @@ const classList = computed(() => {
   const { type, round, disabled, size } = props
   return [
     {
-      [`a-button-${type}`]: type,
-      [`a-button-${round}`]: round,
-      [`a-button-${size}`]: size,
-      'is-disabled': disabled
+      [`a-button--${type}`]: type,
+      [`a-button--${size}`]: size,
+      'is-disabled': disabled,
+      'is-round': round
     }
   ]
 })
@@ -33,7 +31,9 @@ function handleClick(event: MouseEvent) {
 </script>
 
 <template>
-  <button class="a-button" :class="classList" @click="handleClick">
-    <slot>button</slot>
+  <button :class="classList" class="a-button" @click="handleClick">
+    <span>
+      <slot>button</slot>
+    </span>
   </button>
 </template>

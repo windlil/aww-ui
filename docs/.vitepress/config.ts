@@ -1,9 +1,32 @@
 import { demoblockPlugin, demoblockVitePlugin } from 'vitepress-theme-demoblock'
 import { defineConfig } from 'vitepress'
-import { sidebars } from './configs/sidebars'
-import { navs } from './configs/nav'
+import { zhNav, enNav } from './configs/navs'
+import { enSidebar, zhSidebar } from './configs/sidebars'
 
 export default defineConfig({
+  title: 'AwwUI',
+  lang: 'en-US',
+  base: '/aww-ui/',
+  locales: {
+    'root': {
+      label: 'English',
+      lang: 'en-US',
+      link: '/doc/en-US/',
+      themeConfig: {
+        nav: enNav,
+        sidebar: enSidebar
+      }
+    },
+    'zh-CN': {
+      label: '中文',
+      lang: 'zh-CN',
+      link: '/doc/zh-CN/',
+      themeConfig: {
+        nav: zhNav,
+        sidebar: zhSidebar
+      }
+    }
+  },
   markdown: {
     config: (md) => {
       md.use(demoblockPlugin, {
@@ -14,14 +37,5 @@ export default defineConfig({
   vite: {
     plugins: [demoblockVitePlugin()]
   },
-  title: 'AwwUI',
   description: 'Vue3 组件库',
-  themeConfig: {
-    footer: {
-      message: 'Released under the MIT License.',
-      copyright: 'Copyright © 2023-present The Muse Catcher',
-    },
-    nav: navs,
-    sidebar: sidebars,
-  }
 })

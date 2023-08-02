@@ -1,0 +1,11 @@
+@use './common/var.scss' as *;
+@use './mixins/mixin.scss' as *;
+@use './mixins/utils.scss' as *;
+@use './mixins/_button' as *;
+
+@include b(button-group) {
+  display: inline-block;
+  &>.a-button {
+    margin-left: 10px;
+  }
+}
