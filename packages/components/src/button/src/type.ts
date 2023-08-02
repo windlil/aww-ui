@@ -5,7 +5,7 @@ export type Size = 'large' | 'normal' | 'small'
 
 export interface Props {
   type?: Type
-  round: Round
+  round?: Round
   disabled?: Disbled
   size?: Size
 }

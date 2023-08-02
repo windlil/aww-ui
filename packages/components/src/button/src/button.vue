@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 import type { Props } from './type'
 
 defineOptions({
@@ -12,6 +12,7 @@ const props = withDefaults(defineProps<Props>(), {
 })
 
 const emits = defineEmits(['click'])
+const pulsing = ref(false)
 
 const classList = computed(() => {
   const { type, round, disabled, size } = props
@@ -19,6 +20,7 @@ const classList = computed(() => {
     {
       [`a-button--${type}`]: type,
       [`a-button--${size}`]: size,
+      'a-button--pulsing': pulsing.value,
       'is-disabled': disabled,
       'is-round': round
     }
@@ -26,12 +28,20 @@ const classList = computed(() => {
 })
 
 function handleClick(event: MouseEvent) {
+  pulsing.value = false
+  requestAnimationFrame(() => {
+    pulsing.value = true
+  })
   emits('click', event)
+}
+
+function handleAnimationEnd() {
+  pulsing.value = false
 }
 </script>
 
 <template>
-  <button :class="classList" class="a-button" @click="handleClick">
+  <button :class="classList" class="a-button" @click="handleClick" @animationend="handleAnimationEnd">
     <span>
       <slot>button</slot>
     </span>

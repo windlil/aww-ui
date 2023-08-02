@@ -7,6 +7,10 @@ import { useComponents } from './useComponents'
 
 export default {
   ...DefaultTheme,
+  setup() {
+    const switchBtn = document.querySelector('.VPSwitchAppearance')
+    console.log(switchBtn)
+  },
   enhanceApp({ app }) {
     app.use(AwwUI)
     useComponents(app)

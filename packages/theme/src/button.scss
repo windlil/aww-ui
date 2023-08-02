@@ -2,8 +2,10 @@
 @use './mixins/mixin.scss' as *;
 @use './mixins/utils.scss' as *;
 @use './mixins/_button' as *;
+@use './common/animation.scss' as *;
 
 @include b(button) {
+  position: relative;
   box-sizing: border-box;
   display: inline-block;
   margin: 0;
@@ -14,31 +16,85 @@
   cursor: pointer;
   border: 1px solid $border-color-base;
   background-color: $button-default-backgroundColor;
-  color: $button-text-color;
+  color: $color-white;
   transition: 0.2s;
 
-  &:hover {
-    color: $color-primary;
-    border-color: $color-primary;
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    display: block;
+    pointer-events: none;
+    border-radius: inherit;
+    animation-duration: 700ms;
+    animation-iteration-count: 1;
+  }
+
+  &:hover, &:focus, &:active {
+    background-color: mix($color-white, $button-default-backgroundColor, $button-hover-percent); 
+  }
+
+
+
+  @include when(disabled) {
+    &, &:hover, &:focus {
+      cursor: not-allowed;
+      background-color: mix($button-default-backgroundColor, $color-white);
+    }
   }
 
   @include utils-user-select(none);
 
   @include button-size($button-padding-vertical, $button-padding-horizontal, $button-font-size, $button-border-radius);
 
+
   @include m(primary) {
-    @include button-main($button-primary-backgroundColor, $color-primary, #fff);
+    @include button-main($button-primary-backgroundColor, $color-primary, #fff, primary);
   }
 
-  @include m(sucess) {
-    @include button-main($button-sucss-backgroundColor, $color-success, #fff);
+  @include m(success) {
+    @include button-main($button-success-backgroundColor, $color-success, #fff, success);
   }
 
   @include m(warning) {
-    @include button-main($button-warning-backgroundColor, $color-warning, #fff);
+    @include button-main($button-warning-backgroundColor, $color-warning, #fff, warning);
   }
 
   @include m(danger) {
-    @include button-main($button-danger-backgroundColor, $color-danger, #fff);
+    @include button-main($button-danger-backgroundColor, $color-danger, #fff, danger);
+  }
+
+  @include m(large) {
+    @include button-size($button-large-padding-vertical, $button-large-padding-horizontal, $font-size-large, $button-border-radius)
+  }
+
+  @include m(small) {
+    @include button-size($button-small-padding-vertical, $button-small-padding-horizontal, $font-size-small, $button-border-radius)
+  }
+
+  @include when(round) {
+    border-radius: $button-round-radius;
+  }
+
+  @include m(ripple) {
+    @include ripple($button-default-backgroundColor, default)
   }
 }
+
+.a-button--primary.a-button--ripple {
+  @include ripple($button-primary-backgroundColor, primary)
+}
+
+.a-button--success.a-button--ripple {
+  @include ripple($button-success-backgroundColor, success)
+}
+
+.a-button--warning.a-button--ripple {
+  @include ripple($button-warning-backgroundColor, warning)
+}
+
+.a-button--danger.a-button--ripple {
+  @include ripple($button-warning-backgroundColor, danger)
+}
+
+
