@@ -54,3 +54,10 @@
     }
   }
 }
+
+@mixin simple($background-color) {
+  &.a-button--simple {
+    background-color: $background-color;
+    color: $font-gray;
+  }
+}

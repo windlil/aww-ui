@@ -4,12 +4,21 @@ $color-success: #10b956 !default;
 $color-warning: rgb(205, 164, 40) !default;
 $color-danger: #ce3232 !default;
 
+$color-primary-opacity: hsla(207, 86%, 57%, 0.2) !default;
+$color-default-opacity: hsl(0, 0%, 55%, 0.2) !default;
+$color-success-opacity: hsl(145, 84%, 39%, 0.2) !default;
+$color-warning-opacity: rgb(205, 164, 40, 0.2) !default;
+$color-danger-opacity: hsl(0, 61%, 50%, 0.2) !default;
+
 $color-white: #fff !default;
 $color-gray: #7c7c7c !default;
+$color-transparent: transparent;
 
 $font-size-base: 14px !default;
 $font-size-large: 16px !default;
 $font-size-small: 12px !default;
+
+$font-gray: #d6d6d6;
 
 $border-color-base: #818387 !default;
 $border-radius-base: 4px !default;
@@ -24,6 +33,12 @@ $button-primary-backgroundColor: $color-primary !default;
 $button-success-backgroundColor: $color-success !default;
 $button-warning-backgroundColor: $color-warning !default;
 $button-danger-backgroundColor: $color-danger !default;
+// simple button
+$button-simple-primary-backgroundColor: $color-primary-opacity !default;
+$button-simple-default-backgroundColor: $color-default-opacity !default;
+$button-simple-success-backgroundColor: $color-success-opacity !default;
+$button-simple-warning-backgroundColor: $color-warning-opacity !default;
+$button-simple-danger-backgroundColor: $color-danger-opacity !default;
 
 $button-default-borderColor: $border-color-base !default;
 

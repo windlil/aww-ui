@@ -50,18 +50,22 @@
 
   @include m(primary) {
     @include button-main($button-primary-backgroundColor, $color-primary, #fff, primary);
+    @include simple($button-simple-primary-backgroundColor);
   }
 
   @include m(success) {
     @include button-main($button-success-backgroundColor, $color-success, #fff, success);
+    @include simple($button-simple-success-backgroundColor);
   }
 
   @include m(warning) {
     @include button-main($button-warning-backgroundColor, $color-warning, #fff, warning);
+    @include simple($button-simple-warning-backgroundColor);
   }
 
   @include m(danger) {
     @include button-main($button-danger-backgroundColor, $color-danger, #fff, danger);
+    @include simple($button-simple-danger-backgroundColor);
   }
 
   @include m(large) {
@@ -78,6 +82,10 @@
 
   @include m(ripple) {
     @include ripple($button-default-backgroundColor, default)
+  }
+
+  @include m(simple) {
+    background-color: $color-transparent;
   }
 }
 
