@@ -9,10 +9,11 @@ defineOptions({
 const props = withDefaults(defineProps<Props>(), {
   round: false,
   disabled: false,
+  ripple: true
 })
 
 const emits = defineEmits(['click'])
-const pulsing = ref(false)
+const ripple = ref(false)
 
 const classList = computed(() => {
   const { type, round, disabled, size } = props
@@ -20,7 +21,8 @@ const classList = computed(() => {
     {
       [`a-button--${type}`]: type,
       [`a-button--${size}`]: size,
-      'a-button--pulsing': pulsing.value,
+      'a-button--ripple': ripple.value,
+      'a-button--simple': props.simple,
       'is-disabled': disabled,
       'is-round': round
     }
@@ -28,15 +30,17 @@ const classList = computed(() => {
 })
 
 function handleClick(event: MouseEvent) {
-  pulsing.value = false
-  requestAnimationFrame(() => {
-    pulsing.value = true
-  })
+  if (props.ripple) {
+    ripple.value = false
+    requestAnimationFrame(() => {
+      ripple.value = true
+    })
+  }
   emits('click', event)
 }
 
 function handleAnimationEnd() {
-  pulsing.value = false
+  ripple.value = false
 }
 </script>
 

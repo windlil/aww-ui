@@ -5,6 +5,7 @@
 
 @include b(button-group) {
   display: inline-block;
+  width: 100%;
   margin-bottom: 20px;
   &>.a-button {
     margin-left: 10px;
