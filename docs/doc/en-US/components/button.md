@@ -27,7 +27,7 @@ Use `type`,`round` to define Button basic style.
 
 
 ## Simple button
-Use `simple` to make button style more simpler.
+Use `simple` to make button style more simplier.
 
 :::demo
 ```vue
@@ -38,6 +38,13 @@ Use `simple` to make button style more simpler.
     <a-button type="success" simple>Success</a-button>
     <a-button type="warning" simple>Warning</a-button>
     <a-button type="danger" simple>Danger</a-button>
+  </a-button-group>
+    <a-button-group>
+    <a-button simple round>Default</a-button>
+    <a-button type="primary" simple round>Primary</a-button>
+    <a-button type="success" simple round>Success</a-button>
+    <a-button type="warning" simple round>Warning</a-button>
+    <a-button type="danger" simple round>Danger</a-button>
   </a-button-group>
 </template>
 ```
@@ -103,4 +110,5 @@ Use `ripple` to determine whether the button has a ripple .
 | size     | button size         | `'large' \| 'normal' \| 'small'`                | 'normal' |
 | disabeld | disable the button  | `boolean`                                       | false    |
 | ripple   | button click ripple | `boolean`                                       | true     |
+| simple   | simple button style | `boolean`                                       | false    |
 
