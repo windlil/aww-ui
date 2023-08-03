@@ -39,12 +39,29 @@ Use `simple` to make button style more simplier.
     <a-button type="warning" simple>Warning</a-button>
     <a-button type="danger" simple>Danger</a-button>
   </a-button-group>
-    <a-button-group>
+  <a-button-group>
     <a-button simple round>Default</a-button>
     <a-button type="primary" simple round>Primary</a-button>
     <a-button type="success" simple round>Success</a-button>
     <a-button type="warning" simple round>Warning</a-button>
     <a-button type="danger" simple round>Danger</a-button>
+  </a-button-group>
+</template>
+```
+:::
+
+## Text button
+Use `text` to make button like normal text.
+
+:::demo
+```vue
+<template>
+  <a-button-group>
+    <a-button text>Default</a-button>
+    <a-button type="primary" text>Primary</a-button>
+    <a-button type="success" text>Success</a-button>
+    <a-button type="warning" text>Warning</a-button>
+    <a-button type="danger" text>Danger</a-button>
   </a-button-group>
 </template>
 ```
@@ -111,4 +128,21 @@ Use `ripple` to determine whether the button has a ripple .
 | disabeld | disable the button  | `boolean`                                       | false    |
 | ripple   | button click ripple | `boolean`                                       | true     |
 | simple   | simple button style | `boolean`                                       | false    |
+| text     | text button         | `boolean`                                       | false    |
+
+
+
+### Button Events
+
+| Name  | Description  | Type              | Default |
+| ----- | ------------ | ----------------- | ------- |
+| click | button click | `(e: MouseEvent)` | --      |
+
+
+
+### Button slots
+
+| Name    | Description           |
+| ------- | --------------------- |
+| default | button's default slot |
 
