@@ -10,7 +10,11 @@
     "vue",
     "vue-components"
   ],
-  "main": "index.js",
+  "main": "dist/lib/index.js",
+  "types": "dist/lib/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "test": "vitest",
     "prepare": "husky install",
@@ -20,7 +24,6 @@
     "register:components": "vitepress-rc"
   },
   "dependencies": {
-    "element-plus": "^2.3.8",
     "vue": "^3.1.0"
   },
   "devDependencies": {
@@ -29,12 +32,14 @@
     "@commitlint/config-conventional": "^17.6.7",
     "@types/node": "^20.4.5",
     "@vitejs/plugin-vue": "^4.2.3",
+    "@vue/runtime-core": "^3.3.4",
     "eslint": "^8.46.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.3",
     "sass": "^1.64.2",
     "typescript": "^5.1.6",
     "vite": "^4.4.7",
+    "vite-plugin-dts": "^3.4.0",
     "vitepress": "1.0.0-beta.7",
     "vitepress-theme-demoblock": "^3.0.3",
     "vitest": "^0.33.0"
