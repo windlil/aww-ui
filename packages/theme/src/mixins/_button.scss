@@ -1,4 +1,5 @@
 @use '../common/var.scss' as *;
+@use './mixin.scss' as *;
 
 @mixin button-main($background-color, $border-color, $color, $type) {
   background-color: $background-color;
@@ -17,6 +18,11 @@
       background-color: mix($background-color, $color-gray) !important;
       border-color: mix($border-color, $color-gray) !important;
     }
+  }
+
+  @include when(text) {
+    background-color: transparent;
+    color: $background-color !important;
   }
 }
 

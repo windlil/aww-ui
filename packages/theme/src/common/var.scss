@@ -1,23 +1,24 @@
 $color-primary: #339af0 !default;
-$color-default: #424242 !default;
+$color-default: #cdcdcd !default;
 $color-success: #10b956 !default;
 $color-warning: rgb(205, 164, 40) !default;
 $color-danger: #ce3232 !default;
 
 $color-primary-opacity: hsla(207, 86%, 57%, 0.2) !default;
-$color-default-opacity: hsla(0, 0%, 55%, 0.2) !default;
+$color-default-opacity: hsl(0, 0%, 80%, 0.2) !default;
 $color-success-opacity: hsl(145, 84%, 39%, 0.2) !default;
 $color-warning-opacity: rgb(205, 164, 40, 0.2) !default;
 $color-danger-opacity: hsl(0, 61%, 50%, 0.2) !default;
 
 $color-primary-opacity-hover: hsla(207, 86%, 57%, 0.4) !default;
-$color-default-opacity-hover: hsl(0, 0%, 55%, 0.4) !default;
+$color-default-opacity-hover: hsl(0, 0%, 80%, 0.4) !default;
 $color-success-opacity-hover: hsl(145, 84%, 39%, 0.4) !default;
 $color-warning-opacity-hover: rgb(205, 164, 40, 0.4) !default;
 $color-danger-opacity-hover: hsl(0, 61%, 50%, 0.4) !default;
 
 $color-white: #fff !default;
 $color-gray: #7c7c7c !default;
+$font-gray-1: #424242 !default;
 $color-transparent: transparent;
 
 $font-size-base: 14px !default;

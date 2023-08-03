@@ -16,7 +16,7 @@ const emits = defineEmits(['click'])
 const ripple = ref(false)
 
 const classList = computed(() => {
-  const { type, round, disabled, size } = props
+  const { type, round, disabled, size, text } = props
   return [
     {
       [`a-button--${type}`]: type,
@@ -24,13 +24,14 @@ const classList = computed(() => {
       'a-button--ripple': ripple.value,
       'a-button--simple': props.simple,
       'is-disabled': disabled,
-      'is-round': round
+      'is-round': round,
+      'is-text': text
     }
   ]
 })
 
 function handleClick(event: MouseEvent) {
-  if (props.ripple) {
+  if (props.ripple && !props.text) {
     ripple.value = false
     requestAnimationFrame(() => {
       ripple.value = true

@@ -11,4 +11,5 @@ export interface Props {
   size?: Size
   ripple?: boolean
   simple?: boolean
+  text?: boolean
 }

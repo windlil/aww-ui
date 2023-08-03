@@ -14,7 +14,7 @@
   text-align: center;
   white-space: nowrap;
   cursor: pointer;
-  border: 1px solid $border-color-base;
+  border: 1px solid $button-default-backgroundColor;
   background-color: $button-default-backgroundColor;
   color: $color-white;
   transition: 0.2s;
@@ -37,8 +37,14 @@
   &.a-button--simple {
     color: $border-color-base;
     &:hover, &:active, &:focus {
-      background-color: mix(#3a3a3a, $button-default-backgroundColor, 90%); 
+      background-color: $color-default-opacity-hover; 
     }
+  }
+
+  @include when(text) {
+    color: $font-gray-1;
+    background-color: transparent;
+    border: 0;
   }
 
   @include when(disabled) {
@@ -93,7 +99,12 @@
     background-color: $button-simple-default-backgroundColor;
     color: $font-gray;
   }
+}
 
+[data-theme='dark'] {
+  @include b(button) {
+    color: $color-white;
+  }
 }
 
 .a-button--primary.a-button--ripple {
@@ -111,5 +122,7 @@
 .a-button--danger.a-button--ripple {
   @include ripple($button-danger-backgroundColor, danger)
 }
+
+
 
 
