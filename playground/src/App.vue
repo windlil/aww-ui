@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { AButton } from 'aww-ui'
+import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
@@ -7,21 +7,24 @@ import { AButton } from 'aww-ui'
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
     </a>
+    <a href="https://vuejs.org/" target="_blank">
+      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
+    </a>
   </div>
   <HelloWorld msg="Vite + Vue" />
-  <div class="btn-group">
-    <a-button type="primary"></a-button>
-    <a-button type="warning"></a-button>
-    <a-button type="default"></a-button>
-    <a-button type="success"></a-button>
-    <a-button type="danger"></a-button>
-  </div>
 </template>
 
 <style scoped>
-.btn-group {
-  display: flex;
-  justify-content: space-between;
-  width: 400px;
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.vue:hover {
+  filter: drop-shadow(0 0 2em #42b883aa);
 }
 </style>

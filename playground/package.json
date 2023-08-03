@@ -9,7 +9,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "aww-ui": "workspace:^",
     "vue": "^3.3.4"
   },
   "devDependencies": {
