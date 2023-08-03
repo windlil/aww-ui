@@ -10,7 +10,7 @@ export default defineConfig({
     minify: false,
     rollupOptions: {
       external: ['vue'],
-      input: ['src/index.ts'],
+      input: ['./src/index.ts'],
       output: [
         {
           format: 'es',
@@ -36,7 +36,7 @@ export default defineConfig({
   plugins: [
     vue(),
     dts({
-      entryRoot: 'src',
+      entryRoot: './src',
       outDir: '../../dist/es'
     })
   ]

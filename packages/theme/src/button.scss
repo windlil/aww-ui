@@ -101,12 +101,6 @@
   }
 }
 
-[data-theme='dark'] {
-  @include b(button) {
-    color: $color-white;
-  }
-}
-
 .a-button--primary.a-button--ripple {
   @include ripple($button-primary-backgroundColor, primary)
 }
