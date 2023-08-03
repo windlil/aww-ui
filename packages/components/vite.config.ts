@@ -38,10 +38,6 @@ export default defineConfig({
     dts({
       entryRoot: 'src',
       outDir: '../../dist/es'
-    }),
-    dts({
-      entryRoot: 'src',
-      outDir: '../../dist/lib'
-    }),
+    })
   ]
 })
