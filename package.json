@@ -13,6 +13,13 @@
   "main": "dist/lib/index.js",
   "types": "dist/es/index.d.ts",
   "module": "dist/es/index.js",
+  "exports": {
+    "./dist/style": "./dist/styles/index.css",
+    ".": {
+      "import": "./dist/es/index.js",
+      "require": "./dist/lib/index.js"
+    }
+  },
   "files": [
     "dist"
   ],
