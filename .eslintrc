@@ -4,6 +4,7 @@
     "comma-dangle": "off",
     "@typescript-eslint/comma-dangle": "off",
     "vue/html-self-closing": "off",
-    "sort-imports": "off"
+    "sort-imports": "off",
+    "vue/component-name-in-template-casing": "off"
   }
 }
