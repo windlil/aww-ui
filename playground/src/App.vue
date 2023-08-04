@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { AButton } from 'aww-ui'
+import 'aww-ui/dist/button.css'
 import HelloWorld from './components/HelloWorld.vue'
 </script>
 
@@ -12,6 +14,7 @@ import HelloWorld from './components/HelloWorld.vue'
     </a>
   </div>
   <HelloWorld msg="Vite + Vue" />
+  <a-button type="primary"></a-button>
 </template>
 
 <style scoped>
