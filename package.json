@@ -1,7 +1,7 @@
 {
   "name": "aww-ui",
   "type": "module",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Vue components library",
   "author": "windlil",
   "license": "ISC",
@@ -14,7 +14,8 @@
   "types": "dist/es/index.d.ts",
   "module": "dist/es/index.js",
   "exports": {
-    "./dist/style": "./dist/styles/index.css",
+    "./styles/index.css": "./dist/styles/index.css",
+    "./styles/*.css": "./dist/styles/*.css",
     ".": {
       "import": "./dist/es/index.js",
       "require": "./dist/lib/index.js"
