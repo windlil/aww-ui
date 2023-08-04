@@ -1,0 +1,66 @@
+:root {
+  --vp-c-brand: #8a30f1;
+  --vp-c-brand-light: #6122a9;
+  --vp-c-brand-lighter: #6122a9;
+  --vp-c-brand-lightest: #bcc0ff;
+  --vp-c-brand-dark: #6122a9;
+  --vp-c-brand-darker: #6122a9;
+  --vp-c-brand-dimm: rgba(100, 108, 255, 0.08);
+  --c-brand: #6122a9;
+  --c-brand-light: #6122a9;
+  --vp-button-brand-bg: #5c2e91;
+  --vp-button-brand-hover-bg: #6f38af;
+}
+
+:root {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(120deg,
+      #af0dfb 30%,
+      #ff41f2);
+}
+
+h2 {
+  border: 0 !important;
+  padding-top: 0;
+}
+
+table {
+  display: inline-table !important;
+  width: 100%;
+}
+
+.VPHomeHero .container {
+  user-select: none;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  padding-top: 160px !important;
+}
+
+.VPHomeHero .container .main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.VPHomeHero .container .image {
+  position: absolute;
+  top: 90px;
+  left: 53%;
+
+}
+
+.main .text {
+  font-size: 20px !important;
+}
+
+.VPSidebarItem.level-1.is-link.is-active.has-active {
+  background-color: #54208b3d;
+}
+
+.VPSidebarItem .level-1 {
+  border-radius: 8px;
+  padding: 3px 0;
+  padding-left: 12px;
+}

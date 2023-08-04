@@ -1,36 +1,21 @@
 ---
 layout: home
 title: AwwUI
-titleTemplate: Vue3 components library
+titleTemplate: Vue3 component library
 
 hero:
-  name: AwwUI
-  text: componnet Library
   image:
-    src: /logo.svg
-  tagline: Base Vue3 + TS + Vite + Less
+    src: /logo.png
+  name: AwwUI
+  text: Vue3 component library
   actions:
     - theme: brand
       text: Get Started
-      link: /guide/
+      link: /doc/en-US/guide/installation
     - theme: alt
       text: View on GitHub
-      link: 
+      link: https://github.com/AwwUI/aww-ui
     - theme: alt
       text: View on NPM
-      link: 
-
-features:
-  - title: 💡 Instant Server Start
-    details: On demand file serving over native ESM, no bundling required!
-  - title: ⚡️ Lightning Fast HMR
-    details: Hot Module Replacement (HMR) that stays fast regardless of app size.
-  - title: 🛠️ Rich Features
-    details: Out-of-the-box support for TypeScript, JSX, CSS and more.
-  - title: 📦 Optimized Build
-    details: Pre-configured Rollup build with multi-page and library mode support.
-  - title: 🔩 Universal Plugins
-    details: Rollup-superset plugin interface shared between dev and build.
-  - title: 🔑 Fully Typed APIs
-    details: Flexible programmatic APIs with full TypeScript typing.
+      link: https://www.npmjs.com/package/aww-ui
 ---

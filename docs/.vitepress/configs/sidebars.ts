@@ -6,10 +6,6 @@ export const enSidebar = {
       text: 'Basic',
       items: [
         {
-          text: 'Features',
-          link: '/doc/en-US/guide/features'
-        },
-        {
           text: 'Installation',
           link: '/doc/en-US/guide/installation'
         },
@@ -28,10 +24,6 @@ export const zhSidebar = {
     {
       text: '基础',
       items: [
-        {
-          text: '特性',
-          link: '/doc/zh-CN/guide/features'
-        },
         {
           text: '安装',
           link: '/doc/zh-CN/guide/installation'
