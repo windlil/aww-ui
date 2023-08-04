@@ -28,13 +28,13 @@ https://awwui.github.io/aww-ui/
 ## 安装
 ```bash
 #npm
-npm i aww-ui -D
+npm i aww-ui
 
 #yarn
-yarn add aww-ui -D
+yarn add aww-ui
 
 #pnpm
-pnpm add aww-ui -D
+pnpm add aww-ui
 ```
 
 ## 贡献
