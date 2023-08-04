@@ -11,7 +11,7 @@ hero:
   actions:
     - theme: brand
       text: 快速开始
-      link: /doc/en-US/guide/installation
+      link: /doc/zh-CN/guide/installation
     - theme: alt
       text: View on GitHub
       link: https://github.com/AwwUI/aww-ui

@@ -2,8 +2,10 @@ import { demoblockPlugin, demoblockVitePlugin } from 'vitepress-theme-demoblock'
 import { defineConfig } from 'vitepress'
 import { zhNav, enNav } from './configs/navs'
 import { enSidebar, zhSidebar } from './configs/sidebars'
+import { setRewrites } from './utils/setRewrites'
 
 export default defineConfig({
+  rewrites: setRewrites(),
   title: 'AwwUI',
   lang: 'en-US',
   base: '/aww-ui/',
