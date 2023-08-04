@@ -25,7 +25,7 @@ export async function buildComponent() {
 export default series(
   async () => removeDist(),
   parallel(
+    async () => buildComponent(),
     async () => buildStyle(),
-    async () => buildComponent()
   )
 )
