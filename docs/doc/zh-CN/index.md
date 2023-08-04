@@ -7,16 +7,15 @@ hero:
   name: AwwUI
   text: Vue3组件库
   image:
-    src: /logo.svg
-  tagline: Vue3 + TS + Vite + scss
+    src: /logo.png
   actions:
     - theme: brand
-      text: Get Started
-      link: /guide/
+      text: 快速开始
+      link: /doc/en-US/guide/installation
     - theme: alt
       text: View on GitHub
-      link: 
+      link: https://github.com/AwwUI/aww-ui
     - theme: alt
       text: View on NPM
-      link: 
+      link: https://www.npmjs.com/package/aww-ui
 ---
